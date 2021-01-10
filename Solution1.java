@@ -22,8 +22,8 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 import java.util.*;
 
-public class Solution1_1 {
-
+public class Solution1 {
+    /* solution1.1 */
     private static  int[] twoSum(int[] nums, int target) {
 
         Set<Integer> vaules = new HashSet<>();
@@ -58,7 +58,7 @@ public class Solution1_1 {
     public static void main(String[] args){
         int[] nums = new int[]{3,3};
         int target = 6;
-        int[] res = Solution1_1.twoSum(nums,target);
+        int[] res = Solution1.twoSum(nums,target);
 
     }
 
