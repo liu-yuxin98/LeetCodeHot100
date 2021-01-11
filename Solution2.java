@@ -66,48 +66,6 @@ public class Solution2 {
     }
 
 
-
-    public List addTwoNumbers(List l1, List l2) {
-        /* store every l1[i] +l2[i] in res  if null then add 0*/
-         List<Integer> res = new LinkedList();
-         int length = Math.min(l1.size(),l2.size());
-         for(int i=0;i<length;i++){
-             int num1 = (int)l1.get(i);
-             int num2 = (int)l2.get(i);
-             res.add(num1+num2);
-         }
-         if(length == l1.size()){
-             for(int i=length;i<l2.size();i++){
-                 res.add((int)l2.get(i));
-             }
-         }
-         if(length == l2.size()){
-             for(int i=length;i<l1.size();i++){
-                 res.add((int)l1.get(i));
-             }
-         }
-         /* do calculations in res*/
-         List<Integer> output = new LinkedList<>();
-         output.add(0);
-         for(int i = 0;i<res.size();i++){
-             int valuei = output.get(i) + res.get(i);
-             /* if output[i]+res[i] <10 no needs to carry 1 to higher position*/
-                  if(valuei<10){
-                      output.set(i,valuei);
-                      output.add(0);
-                  } else{
-                      /* >10 carry 1 to higher position*/
-                      output.set(i,valuei-10);
-                      output.add(1);
-                  }
-         }
-         output.remove(output.size()-1);
-         return output;
-    }
-
-
-
-
     @Test
     public void Testcases(){
         /* [2,4,3]+[5,6,5]->[7,0,8]*/
