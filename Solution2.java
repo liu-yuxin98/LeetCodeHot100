@@ -15,7 +15,6 @@ import static org.junit.Assert.*;
  */
 
 
-
 public class Solution2 {
      public class ListNode {
       int val;
@@ -31,48 +30,39 @@ public class Solution2 {
          ListNode p = res;
 
          while(true){
-             p.val = p1.val+p2.val;
-             if(p1.next == null || p2.next==null){
-                 break;
-             }
-             p.next = new ListNode(0);
-             p = p.next;
-             p1 = p1.next;
-             p2 = p2.next;
-         }
-         if(p1.next ==null){ /* p2>=p1*/
-             while(p2.next!=null){
-                 p2 = p2.next;
-                 p.next = new ListNode(p2.val);
-                 p = p.next;
-             }
-         }else{ /* p2<=p1*/
-             while(p1.next!=null){
-                 p1 = p1.next;
-                 p.next = new ListNode(p1.val);
-                 p = p.next;
-             }
-         }
+            int valuei = 0;
+            if(p1!=null && p2!=null){
+                valuei = p.val +p1.val+ p2.val;
+                p1 = p1.next;
+                p2 = p2.next;
+            } else if(p1 == null && p2!=null){
+                valuei = p.val+p2.val;
+                p2 = p2.next;
+            } else if (p1!=null && p2 ==null){
+                valuei = p.val + p1.val;
+                p1 = p1.next;
+            } else{
+                /* p1,p2 == null*/
+                break;
+            }
+            if(valuei<10){
+                p.val = valuei;
+                if(p1 ==null && p2 == null){
+                    break;
+                } else{
+                    p.next = new ListNode(0);
+                    p = p.next;
+                }
 
-         /* get res which may contains number larger than 10 and we need to do some operations*/
-         ListNode output = new ListNode(0);
-         ListNode po = output;
-         while(res!=null){
-             if(po.val+res.val<10){
-                 po.val += res.val;
-                 if(res.next == null){
-                     break;
-                 }
-                 po.next = new ListNode(0);
-             } else{
-                 po.val += res.val-10;
-                 po.next = new ListNode(1);
-             }
-             res = res.next;
-             po = po.next;
-         }
+            } else{
+                p.val = valuei-10;
+                p.next = new ListNode(1);
+                p = p.next;
+            }
 
-         return output;
+         }
+            return res;
+
     }
 
 
