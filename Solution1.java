@@ -20,46 +20,33 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 * */
 
+import org.junit.Test;
+
 import java.util.*;
 
 public class Solution1 {
     /* solution1.1 */
     private static  int[] twoSum(int[] nums, int target) {
-
-        Set<Integer> vaules = new HashSet<>();
-        List<Integer> res = new ArrayList<>();
-        /* create map to store the key-value pairs of (number,target-number)*/
-        Map<Integer,Integer> TargetMinus = new HashMap<>();
+        /* create a hashmap for nums[i] and its index    (nums[i],i) */
+        HashMap<Integer,Integer> hashtable = new HashMap<>();
         for(int i=0;i<nums.length;i++){
-            res.add(nums[i]);
-            vaules.add(nums[i]);
-            TargetMinus.put(nums[i],target-nums[i]);
-        }
-        for(int i=0;i< nums.length-1;i++){
-            /* if TargetMinus.get(keys) in values set */
-            int difference = TargetMinus.get(nums[i]);
-            if(vaules.contains(difference)){
-                /* get the index of the TargetMinus.get(nums[i]) */
-                for(int j=i+1;j< nums.length;j++){
-                    if(nums[j] == difference){
-                        /* find the answer*/
-                        int[] result = new int[2];
-                        result[0]  = i;
-                        result[1] = j;
-                        return result;
-                    }
-                }
+            /* find the answer*/
+            if(hashtable.containsKey(target-nums[i])){
+                int[] res = new int[]{i,hashtable.get(target-nums[i])};
+                return res;
             }
+            /* store key-value in map*/
+            hashtable.put(nums[i],i);
         }
-        return null;
+        return new int[0];
 
     }
 
+    /* test esveral cases*/
     public static void main(String[] args){
         int[] nums = new int[]{3,3};
         int target = 6;
         int[] res = Solution1.twoSum(nums,target);
-
     }
 
 
