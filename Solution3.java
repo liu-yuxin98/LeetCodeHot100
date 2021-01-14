@@ -6,47 +6,24 @@ import java.util.Set;
 import static org.junit.Assert.*;
 public class Solution3 {
     public int lengthOfLongestSubstring(String s) {
-
-        int max = 0;
-        int i =0; /* front index of window*/
-        int j = 0; /* back index of window*/
-        /* a moving window*/
-        HashSet<Character> window = new HashSet<>();
-        while(i<s.length() && j<s.length()){
-
-            while(j<s.length()){
-                /* decide if s[j] in the window -> repeat*/
-                if(window.contains(s.charAt(j))){
-                    /* record length if its > max*/
-                    if(window.size()>max){
-                        max = window.size();
-                    }
-                    /* find the index of the repeat char and set the front
-                    of the window to the first index after it
-                     */
-                    while(true){
-                        if(s.charAt(i) == s.charAt(j)){
-                            i += 1;
-                            break;
-                        }
-                        /* delete the char infront of the repeat char including the chr*/
-                        window.remove(s.charAt(i));
-                        i+=1;
-                    }
-                } else{
-                    /* add s[j] to window*/
-                    window.add(s.charAt(j));
-                    if(window.size()>max){
-                        max = window.size();
-                    }
-                }
-                j += 1;
-            }
-
-
+        // record the previous index of the repeat char
+        int[] previous = new int[128];
+        for(int i = 0; i < 128; i++) {
+            previous[i] = -1;
         }
+        int front = 0;/* front of window*/
+        int max = 0; /* result*/
+        for(int i = 0; i < s.length(); i++) {
+            int index = s.charAt(i);
+            front = Math.max(front, previous[index] + 1);
+            max   = Math.max(max, i - front + 1);
+            previous[index] = i;
+        }
+
         return max;
-    }
+
+
+}
 @Test
 public void Testcases(){
         String s = "abcabcbb";
