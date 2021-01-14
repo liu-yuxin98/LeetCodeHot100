@@ -14,7 +14,6 @@ import static org.junit.Assert.*;
  * }
  */
 
-
 public class Solution2 {
      public class ListNode {
       int val;
