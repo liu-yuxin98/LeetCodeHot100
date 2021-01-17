@@ -10,56 +10,38 @@ C can be placed before D (500) and M (1000) to make 400 and 900.
 。*/
 public class Solution13 {
     public int romanToInt(String s) {
-        Map<Character,Integer> maches = new HashMap<>();
-        maches.put('I',1);
-        maches.put('V',5);
-        maches.put('X',10);
-        maches.put('L',50);
-        maches.put('C',100);
-        maches.put('D',500);
-        maches.put('M',1000);
-        int res = 0;
-        for(int i=0;i<s.length();i++){
-          if(s.charAt(i) =='I'){
-              if(i<s.length()-1){
-                  if(s.charAt(i+1) =='V'){
-                      res += 3;
-                      i += 1;
-                  } else if(s.charAt(i+1) == 'X'){
-                      res += 8;
-                      i += 1;
-                  }
-              }
-              res += 1;
-          }
-          else if(s.charAt(i) =='X'){
-              if(i<s.length()-1){
-                  if(s.charAt(i+1) =='L'){
-                      res += 30;
-                      i += 1;
-                  } else if(s.charAt(i+1) == 'C'){
-                      res += 80;
-                      i += 1;
-                  }
-              }
-              res += 10;
-          } else if(s.charAt(i) =='C'){
-              if(i<s.length()-1){
-                  if(s.charAt(i+1) =='D'){
-                      res += 300;
-                      i += 1;
-                  } else if(s.charAt(i+1) == 'M'){
-                      res += 800;
-                      i += 1;
-                  }
-              }
-              res += 100;
-          } else{
-              res += maches.get(s.charAt(i));
-          }
+        /* replace the special cases*/
+        s = s.replace("IV","a");
+        s = s.replace("IX","b");
+        s = s.replace("XL","c");
+        s = s.replace("XC","d");
+        s = s.replace("CD","e");
+        s = s.replace("CM","f");
 
+        int res = 0;
+        for (int i=0; i<s.length(); i++) {
+            res += which(s.charAt(i));
         }
         return res;
+    }
+
+    public int which(char ch) {
+        switch(ch) {
+            case 'I': return 1;
+            case 'V': return 5;
+            case 'X': return 10;
+            case 'L': return 50;
+            case 'C': return 100;
+            case 'D': return 500;
+            case 'M': return 1000;
+            case 'a': return 4;
+            case 'b': return 9;
+            case 'c': return 40;
+            case 'd': return 90;
+            case 'e': return 400;
+            case 'f': return 900;
+        }
+        return 0;
     }
 
     @Test
