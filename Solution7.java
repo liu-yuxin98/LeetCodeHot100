@@ -1,7 +1,6 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 public class Solution7 {
-
     public int reverse(int x) {
         if(  x >Integer.MAX_VALUE || x<Integer.MIN_VALUE ){
             return 0;
