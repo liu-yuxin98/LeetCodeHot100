@@ -37,15 +37,3 @@ def reverse_linked_list(root):
         root = temp
     return head
 
-
-l3 = ListNode(3,None)
-l2 = ListNode(2, l3)
-l1 = ListNode(1, l2)
-
-l1 = reverse_linked_list(l1)
-while l1:
-    print(l1.val)
-    l1 = l1.next
-    
-    
-    
