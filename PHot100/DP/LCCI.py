@@ -27,3 +27,4 @@ nums = [4,1]
 
 print(rob(nums))
 
+print(False or True)
