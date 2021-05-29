@@ -31,11 +31,6 @@ def search(nums, target):
     return -1
 
 
-        
-        
-        
-
-
 
 nums = [1, 2, 3]
 target = 2
