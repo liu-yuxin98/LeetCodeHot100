@@ -23,29 +23,23 @@ def isPalindrome(head):
         length += 1
         t = t.next
 
-    # point the mid to middle of the linked list
-    n = 0
-    mid = head
-    while True:
-        if n == length//2:
-            break
-        mid = mid.next
-        n += 1
-    if length % 2 != 0 and length > 1:
-        mid = mid.next
-
-    # reverse first half part of the linked list
+    # reverse front half part of the linked list and mid point to the middle
     next_p = head.next
     head.next = None
     pos = 1
     while True:
         if pos >= length//2:
+            mid = next_p
             break
         temp = next_p.next
         next_p.next = head
         head = next_p
         next_p = temp
         pos += 1
+    if length % 2 != 0 and length > 1:
+        mid = mid.next
+    if length == 1:
+        mid = head
     # compare mid with new_head
     while True:
         if head is None and mid is None:
@@ -54,23 +48,13 @@ def isPalindrome(head):
             return False
         head = head.next
         mid = mid.next
-    # while True:
-    #     if head is None:
-    #         break
-    #     print(head.val)
-    #     head = head.next
-    # print('----------')
-    # while True:
-    #     if mid is None:
-    #         break
-    #     print(mid.val)
-    #     mid = mid.next
+
 
 
 head = ListNode(1)
-head.next = ListNode(2)
-head.next.next = ListNode(3)
-head.next.next.next = ListNode(3)
-head.next.next.next.next = ListNode(2)
-head.next.next.next.next.next = ListNode(1)
+head.next = ListNode(3)
+head.next.next = ListNode(1)
+# head.next.next.next = ListNode(3)
+# head.next.next.next.next = ListNode(2)
+# head.next.next.next.next.next = ListNode(1)
 res = isPalindrome(head)

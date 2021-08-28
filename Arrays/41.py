@@ -27,7 +27,7 @@ def firstMissingPositive(nums):
 
 
 
-nums = [1,1]
+nums = [1, 1]
 output = firstMissingPositive(nums)
 print(output)
  
