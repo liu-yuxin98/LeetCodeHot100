@@ -24,7 +24,7 @@ def findMin(nums):
             if p1 <= 0:
                 return nums[0]
             if p1 == 1:
-                return min(nums[0],nums[p1])
+                return min(nums[0], nums[p1])
             if nums[p0] > nums[p0+1]:
                 return nums[p0+1]
             if nums[p1] < nums[p1-1]:
