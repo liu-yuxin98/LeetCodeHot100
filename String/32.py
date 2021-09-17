@@ -5,6 +5,7 @@ Created on Sat Sep 11 01:22:15 2021
 @author: Lenovo
 """
 
+
 def longestValidParentheses(s):
     """
     :type s: str
@@ -26,14 +27,7 @@ def longestValidParentheses(s):
                      dp[i] = dp[i-1] + 2
 
     return max(dp)
-    
-    
+
+
 s = ")(()()())"
 m = longestValidParentheses(s)
-    
-    
-
-
-
-
-    
