@@ -42,3 +42,12 @@ def twoSum(nums, target):
 nums = [-1,-2,-3,-4,-5]
 target = -8
 res = twoSum(nums, target)
+
+def twoSum(nums, target):
+    res_dict = {}
+    for i in range(len(nums)):
+        if target-nums[i] in res_dict:
+            return [res_dict[target-nums[i]], i]
+        else:
+            res_dict[nums[i]] = i
+    return []
