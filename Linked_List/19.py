@@ -25,7 +25,6 @@ def removeNthFromEnd(self, head, n):
             break
         p = p.next
         length += 1
-    print(length)
     if length == n:
         head = head.next
     else:
@@ -44,4 +43,21 @@ def removeNthFromEnd(self, head, n):
             p.next = removed.next
     return head
     
-    
+
+def removeNthFromEnd(self, head, n):
+        first = head
+        second = head
+        # move first n steps
+        for i in range(n):
+            first = first.next
+        if first is None:
+            head = head.next
+            return head
+        # move first and second to end
+        while True:
+            if first.next is None:
+                second.next = second.next.next
+                return head
+            first = first.next
+            second = second.next                
+

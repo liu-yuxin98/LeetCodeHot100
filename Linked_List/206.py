@@ -23,3 +23,20 @@ def reverseList(head):
         cur_head = temp_head
     head = cur_head
     return head
+
+def reverseList(head): 
+    if head is None:
+        return None
+    t_head = head
+    cur_head = head
+    next_head = head.next
+    cur_head.next = None
+    while next_head:
+        cur_head = next_head
+        next_head = next_head.next
+        cur_head.next = t_head
+        t_head = cur_head
+    head = cur_head
+    return head
+
+        

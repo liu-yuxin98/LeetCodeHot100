@@ -24,5 +24,25 @@ def lengthOfLongestSubstring(s):
         j += 1
     return max_length
 
-s = "abba"
+def lengthOfLongestSubstring(s):
+    start = 0
+    end = 0
+    output = 0
+    pos_dict = {}
+    while True:
+        if end >= len(s) or start > end:
+            break
+        if s[end] not in s[start:end]:
+            pos_dict[s[end]] = end
+        else:
+            start = max(pos_dict[s[end]]+1, start)
+            pos_dict[s[end]] = end
+        output = max(output, end-start+1)
+        end += 1
+    return output
+
+s = " "
 output = lengthOfLongestSubstring(s)
+
+s = ''
+print('a' in s)

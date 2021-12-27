@@ -27,27 +27,49 @@ Created on Mon Sep 13 09:51:27 2021
 #         return ''.join(stack)
 
 
+# def reverseParentheses(s):
+#     i = 0
+#     stack = []
+#     while True:
+#         if i >= len(s):
+#             break
+#         if s[i] != ')':
+#             stack.append(s[i])
+#         else:
+#             temp = []
+#             while stack:
+#                 if stack[-1] == '(':
+#                     stack.pop()
+#                     break
+#                 temp.append(stack.pop())
+#             stack.extend(temp)
+#         i += 1
+
+#     return ''.join(stack)
+
 def reverseParentheses(s):
-    i = 0
     stack = []
+    i = 0
     while True:
         if i >= len(s):
             break
-        if s[i] != ')':
-            stack.append(s[i])
-        else:
+        elif s[i] ==')':
             temp = []
-            while stack:
-                if stack[-1] == '(':
-                    stack.pop()
+            while True:
+                if stack == []:
                     break
-                temp.append(stack.pop())
-            stack.extend(temp)
-        i += 1
-
+                c = stack.pop()
+                if c == '(':
+                    break
+                else:
+                    temp.append(c)
+            stack.extend(temp)    
+        else:
+            stack.append(s[i])
+        i += 1       
     return ''.join(stack)
 
 s = "(abcd)"
-s = '(u(love)i)'
-s = "(ed(et(oc))el)"
+# s = '(u(love)i)'
+# s = "(ed(et(oc))el)"
 res = reverseParentheses(s)

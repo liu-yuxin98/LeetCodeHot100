@@ -14,6 +14,7 @@ def longestValidParentheses(s):
     if len(s) <= 1:
         return 0
     # dp[i] 表示以s[i]结尾的最长的有效括号的长度
+    # if s[i] == '(' -> dp[i] = 0
     dp = [0] * len(s)
     dp[0] = 0
     for i in range(1, len(s)):
@@ -28,6 +29,20 @@ def longestValidParentheses(s):
 
     return max(dp)
 
+def longestValidParentheses(s):
+    if len(s) <= 1:
+        return 0
+    dp = [0]*len(s)
+    dp[0] = 0
+    for i in range(1,len(s)):
+        if s[i] == ')':
+            pre =(i-1)-dp[i-1]
+            if  pre >= 0 and s[pre] =='(':
+                dp[i] = dp[i-1] + 2 +dp[pre-1]
+    return max(dp)
+    
 
-s = ")(()()())"
+    
+
+s = ""
 m = longestValidParentheses(s)
