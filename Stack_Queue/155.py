@@ -12,8 +12,9 @@ class MinStack(object):
         """
         initialize your data structure here.
         """
+        import sys
         self.stack = []
-        self.minvalue = None
+        self.minvalue = sys.maxsize
 
 
     def push(self, val):
@@ -21,25 +22,24 @@ class MinStack(object):
         :type val: int
         :rtype: None
         """
-        if len(self.stack) == 0:
-            self.stack.append(val)
-            self.minvalue = val
-        else:
-            if self.minvalue <= val:
-                self.stack.append(val)
-            else:
-                self.stack.append(2*val - self.minvalue)
-                self.minvalue = val
-        return 0
+        self.stack.append(val)
+        self.minvalue = min(val,self.minvalue)     
+
+
 
 
     def pop(self):
         """
         :rtype: None
         """
-        if len(self.stack) != 0:
-            if self.stack[-1] >= self.minvalue:
-                self.stack.pop()
+        value = self.stack.pop()
+        if value == self.minvalue:
+            if self.stack != []:
+                self.minvalue = min(self.stack)
+            else:
+                self.minvalue = 'null'
+        return value
+
             
 
         
@@ -48,9 +48,23 @@ class MinStack(object):
         """
         :rtype: int
         """
+        return self.stack[-1]
         
 
     def getMin(self):
         """
         :rtype: int
         """
+        return self.minvalue
+
+'''
+["MinStack","push","push","push","top","pop","getMin","pop","getMin","pop","push","top","getMin","push","top","getMin","pop","getMin"]
+[[],[2147483646],[2147483646],[2147483647],[],[],[],[],[],[],[2147483647],[],[],[-2147483648],[],[],[],[]]
+'''
+obj = MinStack()
+obj.push(2147483646)
+obj.push(2147483646)
+obj.push(2147483646)
+obj.top()
+
+print(type(''))
