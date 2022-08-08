@@ -37,3 +37,4 @@ s = 'abcabcbb'
 s = "1234"
 s = "tmmzuxt"
 out = lengthOfLongestSubstring(s)
+print(out)
