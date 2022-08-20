@@ -42,7 +42,6 @@ def dfs(s,graph):
         if neighbor not in marked:
             edgeTo[neighbor] = s
             dfs(neighbor,graph)
-
-dfs('0',graph)
-print(edgeTo)
+# dfs('0',graph)
+# print(edgeTo)
 
