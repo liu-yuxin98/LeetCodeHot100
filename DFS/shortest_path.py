@@ -109,13 +109,19 @@ for v in graph:
   else:
     hypothesis[v] = sys.maxsize # there is no outgoing edges from v so we set it to infinity
 
-def A_star(s):
+# not guarnteed to be optimal -> if hypothesis is too bad
+# there are some problem with this a star. we can not stop when we rich the goal.
+# we can only stop when we deque goal
+# search way from s to e
+def A_star(s,e):
   distTo[s] = 0
   edgeTo[s] = s
   fringe.put((0,s))
-  while len(already_best) < len(graph):
+  while True:
     cur_best = fringe.get()[1]
     print(cur_best)
+    if cur_best == e:
+      break
     already_best.add(cur_best)
     neighbors = graph[cur_best]
     for neighbor in neighbors:
@@ -127,7 +133,7 @@ def A_star(s):
           fringe.put((distTo[neighbor]+hypothesis[neighbor],neighbor))
 
 print('-----------------A*-----------')
-A_star(0)
+A_star(0,6)
 print(distTo)
 print(edgeTo)
 
@@ -144,6 +150,6 @@ for node in graph:
   fringe.put((sys.maxsize,node))
   distTo[node] = sys.maxsize
 hypothesis = {0:0,1:2,2:1,3:11,4:5,5:9,6:10}
-A_star(0)
+A_star(0,6)
 print(distTo)
 print(edgeTo)
