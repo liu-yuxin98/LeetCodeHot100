@@ -1,0 +1,108 @@
+# def solveNQueens(n: int) -> list[list[str]]:
+#     def generateBoard():
+#         board = list()
+#         for i in range(n):
+#             row[queens[i]] = "Q"
+#             board.append("".join(row))
+#             row[queens[i]] = "."
+#         return board
+
+#     def backtrack(row: int):
+#         if row == n:
+#             board = generateBoard()
+#             solutions.append(board)
+#         else:
+#             for i in range(n):
+#                 if i in columns or row - i in diagonal1 or row + i in diagonal2:
+#                     continue
+#                 queens[row] = i
+#                 columns.add(i)
+#                 diagonal1.add(row - i)
+#                 diagonal2.add(row + i)
+#                 backtrack(row + 1)
+#                 columns.remove(i)
+#                 diagonal1.remove(row - i)
+#                 diagonal2.remove(row + i)
+              
+#     solutions = list()
+#     queens = [-1] * n
+#     columns = set()
+#     diagonal1 = set()
+#     diagonal2 = set()
+#     row = ["."] * n
+#     backtrack(0)
+#     return solutions
+
+
+def solveNQueens(n: int) -> list[list[str]]:
+    # decide if quuen is valid till row 
+    def is_valid(queen,row):
+        for i in range(row):
+            cond1 = queen[i] == queen[row]
+            cond2 = queen[i] - i == queen[row]-row
+            cond3 = queen[i] + i == queen[row]+row
+            if cond1 or cond2 or cond3:
+                return False
+        return True
+
+    # find valid queen using back tracking
+
+    def back_tracking(queen,row):
+
+        for col in range(len(queen)):
+            queen[row] = col
+            if is_valid(queen,row):
+                if row == len(queen)-1:
+                    solutions.append(convert_to_output(queen))
+                else:
+                    back_tracking(queen,row+1)
+
+
+    def convert_to_output(queen):
+        output = [ ''.join(['Q' if j==queen[i] else '.' for j in range(len(queen)) ]) for i in range(len(queen))]
+        return output
+              
+    solutions = list()
+    queen = [-1] * n
+    back_tracking(queen,0)
+    return solutions
+
+
+sol = solveNQueens(4)
+print(sol)
+
+
+
+# # decide if quuen is valid till row 
+# def is_valid(queen,row):
+#     for i in range(row):
+#         cond1 = queen[i] == queen[row]
+#         cond2 = queen[i] - i == queen[row]-row
+#         cond3 = queen[i] + i == queen[row]+row
+#         if cond1 or cond2 or cond3:
+#             return False
+#     return True
+
+# # find valid queen using back tracking
+
+# def back_tracking(queen,row):
+
+#     for col in range(len(queen)):
+#         queen[row] = col
+#         if is_valid(queen,row):
+#             if row == len(queen)-1:
+#                 all_sol.append(queen)
+#                 print(queen,all_sol)
+#             else:
+#                 back_tracking(queen,row+1)
+
+
+# def convert_to_output(queen):
+#     output = [ ''.join(['Q' if j==queen[i] else '.' for j in range(len(queen)) ]) for i in range(len(queen))]
+#     return output
+
+# n = 5
+# t = 0
+# queen = [0]*5
+# back_tracking(queen,0)
+
