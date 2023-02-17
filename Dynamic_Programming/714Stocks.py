@@ -1,21 +1,18 @@
 class Solution:
-    def maxProfit(self, prices: list[int]) -> int:
+    def maxProfit(self, prices: list[int], fee: int) -> int:
         n = len(prices)
-        sold, hold, reset = float('-inf'), float('-inf'), 0
-        for i in range(len(prices)):
-            pre_sold = sold
-            sold = hold + prices[i]
-            hold = max(hold, reset-prices[i])
-            reset = max(pre_sold, reset)
+        profit = 0
+        empty = 0
+        hold = -prices[0]
+        for i in range(n):
+            pre_hold = hold
+            hold = max(pre_hold, empty-prices[i])
+            empty = max(empty, pre_hold+prices[i]-fee)
+        return empty
 
-        return max(sold, reset)
 
+prices = [1, 3, 2, 8, 4, 9]
+fee = 2
 
 s = Solution()
-prices = [1, 2, 3, 4, 5]
-prices = [7, 1, 5, 3, 6, 4]
-# prices = [7, 6, 4, 3, 1, 0]
-# prices = [6, 1, 3, 2, 4, 7]
-# prices = [3, 3, 5, 0, 0, 3, 1, 4]
-# prices = [1, 2, 4, 2, 5, 7, 2, 4, 9, 0]
-print(s.maxProfit(prices))
+print(s.maxProfit(prices, fee))
