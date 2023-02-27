@@ -67,7 +67,7 @@ class Solution:
     #         maxValue = max(maxValue, accumulateSum)
     #     return maxValue
 
-    # dp
+    # method 1 dp-> O(n*k)
     # def maxProfit(self, k: int, prices: list[int]) -> int:
     #     n = len(prices)
 
@@ -101,7 +101,7 @@ class Solution:
     #     res = max(dp[n-1][j][0] for j in range(k+1))
     #     return res
 
-    # merge
+    # method 2 O(n(n-k))
     def maxProfit(self, k: int, prices: list[int]) -> int:
         # special cases O(1)
         if len(prices) <= 1 or k == 0:
@@ -134,14 +134,16 @@ class Solution:
                 profit += prices[trans[1]]-prices[trans[0]]
             return profit
 
-        # we need merge some trans to get max profit O（(n/2-k)*（n/2))-> O(n*(n/2-k))
+        # we need merge some trans to get max profit
         # we should merge or remove trans till len(trans)=k
+        # O（n*(n/2-k))
         while True:
             if len(transactions) == k:
                 break
 
-            # every time we should merge two trans to loos less O(n/2)
-            # find i that max( trans[i][0] -trans[i-1][1]) and merge trans[i] and trans[i-1]
+            # every time we should delete one trans or merge two trans to loos less
+
+            # find min loss if delete O(n/2)
             deleteIndex = 0
             minLossDelete = prices[transactions[0]
                                    [0]] - prices[transactions[0][1]]
@@ -151,6 +153,8 @@ class Solution:
                                            [0]] - prices[transactions[i][1]]
                     deleteIndex = i
 
+            # find i that max( trans[i][0] -trans[i-1][1]) and merge trans[i] and trans[i-1]
+            # find min loss if merge 0(n/2)
             mergeIndex = 1
             minLossMerge = prices[transactions[1][0]] - \
                 prices[transactions[0][1]]
@@ -163,6 +167,7 @@ class Solution:
                     mergeIndex = i
                     minLossMerge = trans2Buy-trans1Sell
 
+            # O(n/2)
             if minLossMerge > minLossDelete:
                 # merge
                 transactions[mergeIndex-1] = [transactions[mergeIndex-1]
@@ -171,8 +176,6 @@ class Solution:
             else:
                 # delete
                 transactions.pop(deleteIndex)
-
-        print(transactions)
         for trans in transactions:
             profit += prices[trans[1]] - prices[trans[0]]
 

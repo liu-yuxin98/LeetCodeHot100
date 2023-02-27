@@ -8,7 +8,7 @@ class Solution:
                 else:
                     dp[i][j] = max(dp[i+1][j], dp[i][j+1])
         print(dp)
-        return dp[0]
+        return dp[0][0]
 
 
 s = Solution()

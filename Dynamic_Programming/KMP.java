@@ -1,2 +1,5 @@
-package Dynamic_Programming;public class KMP {
+package Dynamic_Programming;
+
+public class KMP {
+
 }
