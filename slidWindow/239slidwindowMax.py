@@ -19,10 +19,9 @@ class Solution:
 
     #
     def maxSlidingWindow(self, nums: list[int], k: int) -> list[int]:
-
+        # O(N)
         from collections import deque
         # single stack
-
         n = len(nums)
         stack = deque([])
         res = []
@@ -33,8 +32,8 @@ class Solution:
             while len(stack) > 0 and nums[i] >= nums[stack[-1]]:
                 stack.pop()
             stack.append(i)
+
         res.append(nums[stack[0]])
-        print(stack)
         for i in range(k, n):
             if stack[0] <= i-k:
                 stack.popleft()
