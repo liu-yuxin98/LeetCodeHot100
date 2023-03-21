@@ -1,18 +1,3 @@
-
-def binary_search(nums, target):
-    left = 0
-    right = len(nums)-1
-    while left <= right:
-        mid = (left+right)//2
-        if nums[mid] == target:
-            return mid
-        elif nums[mid] > target:
-            right = mid - 1
-        else:
-            left = mid + 1
-    return -1
-
-
 def findMedianSortedArrays(nums1: list[int], nums2: list[int]) -> float:
     m = len(nums1)
     n = len(nums2)
@@ -113,16 +98,3 @@ def findMedianSortedArrays(nums1: list[int], nums2: list[int]) -> float:
                         if cnt == (m+n)//2+1:
                             return nums2[j]
                         j += 1
-
-
-nums1 = [1, 2]
-nums2 = [3, 4]
-
-nums1 = [1, 3, 5, 7]
-nums2 = [2, 4, 6]
-
-nums1 = [0, 1]
-nums2 = [0]
-
-res = findMedianSortedArrays(nums1, nums2)
-print(res)
