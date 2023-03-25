@@ -1,5 +1,5 @@
 # class Solution:
-    # min heap
+# min heap
 #     def __init__(self) -> None:
 #         self.stack = [-1]
 
@@ -66,17 +66,29 @@
 class Solution:
     def __init__(self) -> None:
         self.stack = []
-        self.min = 100000
+        self.minStack = []
+
     def push(self, node):
         # write code here
         self.stack.append(node)
-        self.min
+        if self.minStack == []:
+            self.minStack.append(node)
+        else:
+            self.minStack.append(min(self.stack[-1], node))
+
     def pop(self):
         # write code here
+        self.pop()
+        self.minStack.pop()
+
     def top(self):
         # write code here
+        return self.stack[-1]
+
     def min(self):
         # write code here
+        return self.min
+
 
 sol = Solution()
 sol.push(5)
