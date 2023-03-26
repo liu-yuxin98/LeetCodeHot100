@@ -95,18 +95,31 @@ def quickSort(nums):
 # Function to find the partition position
 
 
-def partition(array, low, high):
-    pivot = array[low]
-    while(low < high):
-        while(low < high and array[high] >= pivot):
-            high -= 1
-        # find a array[right] < pivot
-        array[low] = array[high]
-        while(low < high and array[low] <= pivot):
-            low += 1
-        array[high] = array[low]
-    array[low] = pivot
-    return low
+# def partition(array, low, high):
+#     pivot = array[low]
+#     while(low < high):
+#         while(low < high and array[high] >= pivot):
+#             high -= 1
+#         # find a array[right] < pivot
+#         array[low] = array[high]
+#         while(low < high and array[low] <= pivot):
+#             low += 1
+#         array[high] = array[low]
+#     array[low] = pivot
+#     return low
+
+
+def partition(array, left, right):
+    pivot = array[right]
+    while(left < right):
+        while(left < right and array[left] <= pivot):
+            left += 1
+        array[right] = array[left]
+        while (left < right and array[right] >= pivot):
+            right -= 1
+        array[left] = array[right]
+    array[right] = pivot
+    return right
 
 # Function to perform quicksort
 
