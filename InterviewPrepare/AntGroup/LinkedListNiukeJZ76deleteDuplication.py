@@ -1,37 +1,31 @@
 class Solution:
     def deleteDuplication(self, pHead):
         # write code here
-        if pHead == None or pHead.next == None:
+        if pHead is None or pHead.next is None:
             return pHead
+        pdict = dict()
+        p = pHead
+        while p:
+            pdict[p.val] = pdict.get(p.val, 0)+1
+            p = p.next
+
+        p = pHead
+        # find first p that are not replication
+        while p:
+            if pdict[p.val] == 1:
+                pHead = p
+                break
+            p = p.next
 
         front = pHead
-        # iterate front.val != front.next.val
-        while front.next:
-            if front.next.val != front.val:
+        back = pHead.next
+        while True:
+            if back is None:
                 break
+            if pdict[back.val] > 1:
+                back = back.next
             else:
-                front = front.next
-        if front.next is None:
-            return None
-
-        pHead = front
-        back = front.next
-        while back:
-            if back.next is None:
-                break
-            else:
-                if back.next.val != back.val:
-                    front = back
-                    back = back.next
-                else:
-                    while True:
-                        if back.next is None:
-                            front.next = None
-                            break
-                        if back.next.val == back.val:
-                            back = back.next
-                        else:
-                            back = back.next
-                            front.next = back
-                            break
+                front.next = back
+                front = back
+                back = back.next
         return pHead
