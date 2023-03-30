@@ -11,6 +11,7 @@ class Solution:
             return head
         p = head
         cur = p.next
+        p.next = None
 
         while cur:
             nextCur = cur.next
