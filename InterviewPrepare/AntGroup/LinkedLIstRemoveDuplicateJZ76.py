@@ -13,7 +13,7 @@ class Solution:
         cur = sentinel
 
         while True:
-            if cur.next.next is None:
+            if cur.next is None or cur.next.next is None:
                 break
             if cur.next.val == cur.next.next.val:
                 repValue = cur.next.val
