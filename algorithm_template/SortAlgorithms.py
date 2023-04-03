@@ -9,6 +9,8 @@ import time
 import copy
 
 # ------------------------ select sort ---------------------------------------- unstable
+
+
 def select_sort(nums):
     for i in range(len(nums)-1):
         min_index = i
@@ -61,6 +63,7 @@ def merge_sort(nums):
     right = merge_sort(nums[mid::])
     sorted_nums = merge_two_list(left, right)
     return sorted_nums
+
 
 def merge_two_list(nums1, nums2):
     if nums1 == [] or nums2 == []:
@@ -119,6 +122,7 @@ def partition(array, left, right):
     return right
 
 # Function to perform quicksort
+
 
 def quick_sort_Helper(array, low, high):
     if low < high:
