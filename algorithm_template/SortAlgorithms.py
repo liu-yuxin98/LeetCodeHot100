@@ -8,9 +8,7 @@ import random
 import time
 import copy
 
-# ------------------------ select sort ----------------------------------------
-
-
+# ------------------------ select sort ---------------------------------------- unstable
 def select_sort(nums):
     for i in range(len(nums)-1):
         min_index = i
@@ -20,7 +18,7 @@ def select_sort(nums):
         nums[i], nums[min_index] = nums[min_index], nums[i]
 
 
-# ------------------------ bubble sort ----------------------------------------
+# ------------------------ bubble sort ---------------------------------------- stable
 def bubble_sort(nums):
     for i in range(len(nums)-1):
         for j in range(len(nums)-i-1):
@@ -28,7 +26,7 @@ def bubble_sort(nums):
                 nums[j], nums[j+1] = nums[j+1], nums[j]
 
 
-# ------------------------ insert sort ----------------------------------------
+# ------------------------ insert sort ---------------------------------------- stable
 def insert_sort(nums):
     for i in range(1, len(nums)):
         j = i-1
@@ -39,7 +37,7 @@ def insert_sort(nums):
         nums[j+1] = key
 
 
-# ------------------------ shell sort -----------------------------------------
+# ------------------------ shell sort ----------------------------------------- unstable
 def shell_sort(nums):
     step = int(len(nums)/2)
     while step > 0:
@@ -54,7 +52,7 @@ def shell_sort(nums):
         step = int(step/2)
 
 
-# ------------------------ merge sort -----------------------------------------
+# ------------------------ merge sort ----------------------------------------- stable
 def merge_sort(nums):
     if len(nums) <= 1:
         return nums
@@ -63,7 +61,6 @@ def merge_sort(nums):
     right = merge_sort(nums[mid::])
     sorted_nums = merge_two_list(left, right)
     return sorted_nums
-
 
 def merge_two_list(nums1, nums2):
     if nums1 == [] or nums2 == []:
@@ -88,7 +85,7 @@ def merge_two_list(nums1, nums2):
     return res
 
 
-# ------------------------ qucik sort -----------------------------------------
+# ------------------------ qucik sort ----------------------------------------- unstable
 def quickSort(nums):
     quick_sort_Helper(nums, 0, len(nums)-1)
 
@@ -123,7 +120,6 @@ def partition(array, left, right):
 
 # Function to perform quicksort
 
-
 def quick_sort_Helper(array, low, high):
     if low < high:
         pi = partition(array, low, high)
@@ -133,7 +129,7 @@ def quick_sort_Helper(array, low, high):
         quick_sort_Helper(array, pi + 1, high)
 
 
-# ------------------------ heap sort ------------------------------------------
+# ------------------------ heap sort ------------------------------------------ unstable
 def heapify(tree, n, i):
     if i >= n:
         return
