@@ -37,10 +37,4 @@ public class max_sum_of_array_after_k_neg_1005 {
     }
 
 
-    public static void main(String[] args) {
-        int [] nums = new int[]{-2,-3,-4};
-        int k = 4;
-        int value = largestSumAfterKNegations(nums,k);
-        System.out.println(value);
-    }
 }

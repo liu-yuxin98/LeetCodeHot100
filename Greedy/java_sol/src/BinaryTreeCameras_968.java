@@ -113,18 +113,6 @@ public class BinaryTreeCameras_968 {
         return camera;
      }
 
-     public static void main(String[] args) {
-         TreeNode root = new TreeNode(0);
-         root.right = new TreeNode(0);
-         root.left = new TreeNode(0);
-         root.right.right = new TreeNode(0);
-         root.right.right.right = new TreeNode(0);
-//         root.right.left.left = new TreeNode(0);
-//         root.left.left.left = new TreeNode(0);
-//         root.left.left.left.right = new TreeNode(0);
-         int cameras = minCameraCover(root);
-         System.out.println(cameras);
 
-     }
 
 }

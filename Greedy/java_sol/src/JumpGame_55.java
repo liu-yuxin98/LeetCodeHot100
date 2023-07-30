@@ -24,9 +24,5 @@ public class JumpGame_55 {
         }
 
     }
-    public static void main(String[] args) {
-        int [] nums = new int[]{3,2,1,0,4};
-        boolean output = canJump(nums);
-        System.out.println(output);
-    }
+
 }

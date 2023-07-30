@@ -37,9 +37,5 @@ public class WiggleSubsequence_376 {
         return cnt;
     }
 
-    public static void main(String[] args) {
-        int [] nums = new int[]{0,0,0};
-        int output = wiggleMaxLength(nums);
-        System.out.println(output);
-    }
+
 }

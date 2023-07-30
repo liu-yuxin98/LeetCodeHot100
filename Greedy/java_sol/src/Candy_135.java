@@ -111,9 +111,5 @@ public class Candy_135 {
         }
         return res;
     }
-    public static void main(String[] args) {
-        int [] ratings = new int[]{1,2,2};
-        int output = candy(ratings);
-        System.out.println(output);
-    }
+
 }

@@ -39,9 +39,5 @@ public class BestTimetoBuyandSellStock_122 {
 
         return earn;
     }
-    public static void main(String[] args) {
-        int [] prices = new int[]{7,6,4,3,1};
-        int output = maxProfit(prices);
-        System.out.println(output);
-    }
+
 }

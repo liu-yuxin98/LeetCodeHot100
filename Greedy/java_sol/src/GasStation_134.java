@@ -39,14 +39,5 @@ public class GasStation_134 {
         return -1;
 
     }
-    public static void main(String[] args) {
-        int [] gas = new int[]{5,1,2,3,4};
-        int [] cost = new int[] {4,4,1,5,1};
-//        int [] gas = new int[]{1,2,3,4,5};
-//        int [] cost = new int[] {3,4,5,1,2};
-//        int [] gas = new int[]{2,3,4};
-//        int [] cost = new int[] {3,4,3};
-        int output = canCompleteCircuit(gas,cost);
-        System.out.println(output);
-    }
+
 }

@@ -30,9 +30,5 @@ public class jumpGame_45 {
 
     }
 
-    public static void main(String[] args) {
-        int [] nums = new int[]{2,3,0,1,4};
-        int output = jump(nums);
-        System.out.println(output);
-    }
+
 }

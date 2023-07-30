@@ -33,14 +33,5 @@ public class mergeIntervals_56 {
 
         return  res;
     }
-    public static void main(String[] args) {
-        int [][] intervals =        {
-                {1,3},
-                {2,6},
-                {8,10},
-                {15,18},
-        };
-        int[][] output = merge(intervals);
-        System.out.println(Arrays.deepToString(output));
-    }
+
 }
