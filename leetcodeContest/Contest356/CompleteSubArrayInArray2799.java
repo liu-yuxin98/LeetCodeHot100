@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-public class CompleteSubArrayInArray6900 {
+public class CompleteSubArrayInArray2799 {
     public static int countCompleteSubarrays(int[] nums) {
         HashMap<Integer,Integer> currentNumInSubArray = new HashMap<>();
         Set<Integer> lackNums = new HashSet<>();
