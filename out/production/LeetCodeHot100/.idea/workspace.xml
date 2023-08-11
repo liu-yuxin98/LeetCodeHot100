@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d75cec88-b1a9-429b-aec6-42a482ccf783" name="Changes" comment="add topcode 23">
+      <change afterPath="$PROJECT_DIR$/codetop/MergeKList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: -1
+}</component>
+  <component name="ProjectId" id="2IIauGoaJCdM0iIZbV36cWRqQdj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "codeTop",
+    "last_opened_file_path": "D:/LeetCodeHot100",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.MergeKList">
+    <configuration name="KthLargestElementInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="codetop.KthLargestElementInArray" />
+      <module name="LeetCodeHot100" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codetop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LRUCache" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="codetop.LRUCache" />
+      <module name="LeetCodeHot100" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codetop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeKList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="codetop.MergeKList" />
+      <module name="LeetCodeHot100" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codetop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchInRotatedSortedArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="codetop.SearchInRotatedSortedArray" />
+      <module name="LeetCodeHot100" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codetop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreeSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="codetop.ThreeSum" />
+      <module name="LeetCodeHot100" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codetop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MergeKList" />
+        <item itemvalue="Application.LRUCache" />
+        <item itemvalue="Application.SearchInRotatedSortedArray" />
+        <item itemvalue="Application.KthLargestElementInArray" />
+        <item itemvalue="Application.ThreeSum" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d75cec88-b1a9-429b-aec6-42a482ccf783" name="Changes" comment="" />
+      <created>1669871771223</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669871771223</updated>
+      <workItem from="1669871773293" duration="254000" />
+      <workItem from="1674828974676" duration="909000" />
+      <workItem from="1674829904434" duration="717000" />
+      <workItem from="1675003435588" duration="39000" />
+      <workItem from="1689002024453" duration="6763000" />
+      <workItem from="1690212936366" duration="599000" />
+      <workItem from="1690383675068" duration="1190000" />
+      <workItem from="1690681843340" duration="24934000" />
+      <workItem from="1690796200182" duration="5515000" />
+      <workItem from="1690895557470" duration="27664000" />
+      <workItem from="1691203200031" duration="20411000" />
+      <workItem from="1691284203121" duration="7635000" />
+      <workItem from="1691411136504" duration="10855000" />
+      <workItem from="1691544694178" duration="24118000" />
+      <workItem from="1691760126542" duration="43000" />
+    </task>
+    <task id="LOCAL-00001" summary="add 88">
+      <created>1690683954248</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690683954248</updated>
+    </task>
+    <task id="LOCAL-00002" summary="clean foler">
+      <created>1690684169153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690684169153</updated>
+    </task>
+    <task id="LOCAL-00003" summary="weekly contest">
+      <created>1690770210261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690770210261</updated>
+    </task>
+    <task id="LOCAL-00004" summary="weekly contest">
+      <created>1690770238446</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690770238446</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add 2799">
+      <created>1690773502573</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690773502573</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add 88">
+      <created>1690788560721</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690788560721</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add 120">
+      <created>1690791217742</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690791217742</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add 27">
+      <created>1690817243505</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690817243505</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add 125">
+      <created>1690818688335</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690818688335</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add 200">
+      <created>1690903163204</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1690903163204</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add 209">
+      <created>1690934783195</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690934783195</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add 383">
+      <created>1690935584376</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1690935584376</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add 67">
+      <created>1690936997213</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1690936997213</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add 36">
+      <created>1690982241645</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1690982241645</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add 25,92,206">
+      <created>1691075422402</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1691075422402</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add lintcode 607">
+      <created>1691233301363</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1691233301363</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add lintcode 200">
+      <created>1691294210927</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1691294210927</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add topcode 3, 146">
+      <created>1691423375068</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1691423375068</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add topcode 25">
+      <created>1691426130981</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1691426130981</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add topcode 206">
+      <created>1691426512376</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1691426512376</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add topcode 103">
+      <created>1691568176437</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1691568176437</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add topcode 15">
+      <created>1691573632217</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1691573632217</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add topcode 215">
+      <created>1691575261290</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1691575261290</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add topcode 33">
+      <created>1691593690814</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1691593690814</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add topcode 121">
+      <created>1691598078079</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1691598078079</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="h150" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clean foler" />
+    <MESSAGE value="weekly contest" />
+    <MESSAGE value="add 2799" />
+    <MESSAGE value="add 88" />
+    <MESSAGE value="add 120" />
+    <MESSAGE value="add 27" />
+    <MESSAGE value="add 125" />
+    <MESSAGE value="add 200" />
+    <MESSAGE value="add 209" />
+    <MESSAGE value="add 383" />
+    <MESSAGE value="add 67" />
+    <MESSAGE value="add 36" />
+    <MESSAGE value="add 25,92,206" />
+    <MESSAGE value="add lintcode 607" />
+    <MESSAGE value="add lintcode 200" />
+    <MESSAGE value="add topcode 3, 146" />
+    <MESSAGE value="add topcode 25" />
+    <MESSAGE value="add topcode 206" />
+    <MESSAGE value="add topcode 103" />
+    <MESSAGE value="add topcode 15" />
+    <MESSAGE value="add topcode 215" />
+    <MESSAGE value="add topcode 33" />
+    <MESSAGE value="add topcode 121" />
+    <MESSAGE value="add topcode 23" />
+    <option name="LAST_COMMIT_MESSAGE" value="add topcode 23" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="pre" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
